@@ -14,15 +14,21 @@
 
 #include <stdio.h>
 
-int count_1(int n)
+int count_1(int n, int i)
 {
-    count_1(n);
+    if (n > 0)
+    {
+        if (n % 2 == 1)
+        i++;
+        count_1(n/2, i);
+    }
 }
 
 int main(void)
 {
-    int n;
+    int n, i;
     scanf("%d", &n);
-    count_1(n);
+    count_1(n, 0);
+    printf("%d\n", count_1(n, i));
     return 0;
 }
