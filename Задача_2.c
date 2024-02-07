@@ -21,6 +21,13 @@ int missing_numbers(int a, int b)
         a++;
         missing_numbers(a, b);
     }
+
+    if (a > b)
+    {
+        printf("%d ", a);
+        a--;
+        missing_numbers(a, b);
+    }
 }
 
 int main(void)
@@ -28,6 +35,6 @@ int main(void)
     int a, b;
     scanf("%d%d", &a, &b);
     missing_numbers(a, b);
-    printf("%d ", b);
+    printf("%d\n", b);
     return 0;
 }
