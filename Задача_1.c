@@ -9,7 +9,7 @@ void print_num(int num)
 
 Пример №2
 Данные на входе: 54321
-Данные на выходе: 5 4 3 2 1 
+Данные на выходе: 5 4 3 2 1
 */
 
 #include <stdio.h>
@@ -18,13 +18,13 @@ int print_num(int n)
 {
     if (n >= 10)
         print_num(n / 10);
-        printf("%d ", (n % 10));
+    printf("%d ", (n % 10));
 }
 
 int main(void)
 {
-int n;
-scanf("%d",&n);
-print_num(n);
-return 0;
+    int n;
+    scanf("%d", &n);
+    print_num(n);
+    return 0;
 }

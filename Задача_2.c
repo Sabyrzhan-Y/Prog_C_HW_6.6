@@ -15,13 +15,19 @@
 
 int missing_numbers(int a, int b)
 {
-    
+    if (a < b)
+    {
+        printf("%d ", a);
+        a++;
+        missing_numbers(a, b);
+    }
 }
 
 int main(void)
 {
-int a, b;
-scanf("%d%d", &a, &b);
-missing_numbers(a, b);
-return 0;
+    int a, b;
+    scanf("%d%d", &a, &b);
+    missing_numbers(a, b);
+    printf("%d ", b);
+    return 0;
 }
